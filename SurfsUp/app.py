@@ -156,10 +156,13 @@ def stations_func():
     
     station_list = []
     # Query station table
-    station_results = session.query(Station.name).all()
+    station_results = session.query(Station.name, 
+                                    Station.latitude, 
+                                    Station.longitude, 
+                                    Station.elevation).all()
     
     # Create list of stations from the query results
-    station_list  = [ s[0] for s in station_results]
+    station_list  = [ dict({'name': s[0], 'lat' : s[1], 'lon': s[2], 'elevation' : s[3]}) for s in station_results]
     
     # Create the dictionary     
     station_dict = dict({"stations" : station_list})
