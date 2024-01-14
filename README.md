@@ -1,4 +1,4 @@
-# Sqlalchemy-Challenge
+# Sqlalchemy Challenge - SurfsUp
 
 ## Analyze and Explore the Climate Data
 
