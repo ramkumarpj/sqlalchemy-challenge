@@ -144,6 +144,10 @@ def precipitation_func():
     # Return JSON representation of list of dictionaries that contains precipitation data
     return jsonify(precipitation_data)
 
+#################################################
+#  Station Route
+#################################################
+
 @app.route("/api/v1.0/stations")
 #Return a JSON list of stations from the dataset.
 def stations_func():
@@ -165,6 +169,9 @@ def stations_func():
     # Return JSON representation of list of stations
     return jsonify(station_dict)
 
+#################################################
+#  Temperature Observations Route
+#################################################
 
 @app.route("/api/v1.0/tobs")
 # Query the dates and temperature observations of 
@@ -199,6 +206,9 @@ def tobs_func():
     # Return JSNO representation of the list of dictionary objects that contains Temperature Observation data
     return jsonify(tobs)
 
+#################################################
+#  Temperatute Stats Route < Start Date >
+#################################################
 
 @app.route("/api/v1.0/<start>")
 # Return a JSON list of the minimum temperature, 
@@ -221,6 +231,10 @@ def temperature_stats_start_func(start):
     
     # Return JSON representation of data
     return jsonify(temp_stats_data)
+
+#################################################
+#  Temperatute Stats Route <Start Date,End Date>
+#################################################
 
 @app.route("/api/v1.0/<start>/<end>")
 # Return a JSON list of the minimum temperature, 
