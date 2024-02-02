@@ -36,7 +36,7 @@ Following routes are provided by the API
 * Jupyter Notbook - /SurfsUp/climate_starter.ipynb
 * Python APp - /SurfsUp/app.py
 
-## Run Insturctions
+## Run Instructions
 
 * Launch Jupyter Notebook jupyter notebook
 * Jupyter Notebook is opened in a browser
